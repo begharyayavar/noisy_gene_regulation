@@ -1,0 +1,14 @@
+# A + B -> C + D ; Ka=Na,Kb=Nb,Type=conversion ; Type=Gaussian mu=x,sigma=y,coefficient=n
+Ga=1000 -> Gb=500 ; ka=80,kb=80,Type=conversion ; coefficient=1 
+Gb=500  -> Ga=1000 ;kd=80,kc=80,Type=conversion ; coefficient=1 
+Ga=1000 -> Pr=0;jo=550,jq=1,Type=enzymatic ; coefficient=1
+Gb=500  -> Pr=0 ;jp=50,jr=1,Type=enzymatic ; coefficient=1
+Pr=0    -> Phi=0 ; kp=1,kq=1,Type=conversion ; coefficient=1
+Phi=0   -> Phi=0; z=1,y=1,Type=conversion ; coefficient=1
+Gc=1000 -> Gd=500 ; ke=80,kf=80,Type=conversion ; coefficient=1 
+Gd=500  -> Gc=1000 ;kg=80,kh=80,Type=conversion ; coefficient=1 
+Gc=1000 -> Pq=0;jr=550,js=1,Type=enzymatic ; coefficient=1
+Gd=500  -> Pq=0 ;jt=50,jq=1,Type=enzymatic ; coefficient=1
+Pq=0    -> Phi=0 ; kr=1,ks=1,Type=conversion ; coefficient=1
+Phi=0   -> Phi=0; f=1,g=1,Type=conversion ; coefficient=1
+Ga=1000 + Pr=0 -> Gc=1000;a=50,b=1,Type=enzymatic ; coefficients=1 

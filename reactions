@@ -1,0 +1,7 @@
+# A + B -> C + D ; Ka=Na,Kb=Nb,Type=conversion ; Type=Gaussian mu=x,sigma=y,coefficient=n
+Ga=1 -> Gb=1 ; ka=8,kb=8,Type=conversion ; coefficient=1 
+Gb=1  -> Ga=1 ;kd=8,kc=8,Type=conversion ; coefficient=1 
+Ga=1 -> Pr=0;jo=500,jq=0,Type=enzymatic ; coefficient=1
+Gb=1  -> Pr=0 ;jp=50,jr=0,Type=enzymatic ; coefficient=1
+Pr=0    -> Phi=0 ; kp=500,kq=0,Type=conversion ; coefficient=1
+Phi=0   -> Phi=0; z=1,y=1,Type=conversion ; coefficient=1
