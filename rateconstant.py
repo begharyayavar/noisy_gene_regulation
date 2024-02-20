@@ -30,6 +30,7 @@ class ReactionRateConstants:
         self.backward_rate = backward_rate_constant
         
         self.reaction_type = reaction_type
+        
     def get_Kf(self) -> float:
         return self.forward_rate.get_value()
     def get_Kb(self) -> float:
@@ -52,3 +53,19 @@ class ReactionRateConstants:
                     Kb : {}\n\
                     Type : {}\n".\
                     format(self.name,self.forward_rate.get_value(),self.backward_rate.get_value(),self.reaction_type)
+                    
+class ReactionsRateConstants:
+    def __init__(self,\
+                    reactionsRateConstants : list[ReactionRateConstants] = []):
+        self.reactionsRateConstants = reactionsRateConstants
+        
+    def add(    self,reactionRateConstant : ReactionRateConstants)\
+                    -> list[ReactionRateConstants]:
+        self.reactionsRateConstants.append(reactionRateConstant)
+        return self.reactionsRateConstants
+    
+    def remove( self,reactionRateConstant : ReactionRateConstants)\
+                    -> list[ReactionRateConstants]:
+        if reactionRateConstant in self.reactionsRateConstants:
+            self.reactionsRateConstants.remove(reactionRateConstant)
+        return self.reactionsRateConstants

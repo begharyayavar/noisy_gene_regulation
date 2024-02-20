@@ -145,8 +145,8 @@ def species_unique_parser(filename):
         
     return species
 
-
-
+def verify_unique():
+    pass
         
 
     

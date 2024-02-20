@@ -60,11 +60,13 @@ class Simulation:
             for j in range(self.length_trial):
                 for k in self.reactions:
                     if transition(k,self.species):
-                        for p in k.products.get_species() :
-                            self.species.update_count(p,+1)
-                        if k.get_reaction_type() == "conversion":
-                            for p in k.reactants.get_species():
-                                self.species.update_count(p,-1)
+                        self.reaction_variables.update(k)
+                        
+                        # for p in k.products.get_species() :
+                        #     self.species.update_count(p,+1)
+                        # if k.get_reaction_type() == "conversion":
+                        #     for p in k.reactants.get_species():
+                        #         self.species.update_count(p,-1)
 
 
             self.collect_results()

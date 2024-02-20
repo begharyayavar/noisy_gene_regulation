@@ -6,7 +6,33 @@ from functools import reduce
 from reactions import Reaction
 from species import Species
 
-def transition(reaction : Reaction,species : Species,method = "Gillespie"):
+
+class SimulationVariable:
+    def __init__(self,specie,reactions):
+        self.name = specie.name()
+        self.count = specie.count()
+        
+
+class SimulationVariables:
+    def __init__(self,species,reactions):
+        self.species = species
+        self.species_count = {i.name():0 for i in self.species}
+        self.reactions = reactions
+        self.reactions_list = [i.repr() for i in self.reactions]
+        self.rate_constants = []
+        pass
+    def add_species(self):
+        pass
+    def remove_species(self):
+        pass
+    def add_reaction(self):
+        pass
+    def remove_reaction(self):
+        pass
+    
+
+
+def transition(reaction : Reaction,species : Species,reaction_rates,method = "Gillespie"):
     
     if method == "MonteCarlo":
 
